@@ -1,5 +1,15 @@
-AdventCalendar/bin/
-AdventCalendar/obj/
-AdventOfCode2024/bin/
-AdventOfCode2024/obj/
-.vscode/
+**/[Bb]in/
+**/[Oo]bj/
+.vscode/**
+# Build results
+
+[Dd]ebug/
+[Rr]elease/
+x64/
+[Bb]in/
+[Oo]bj/
+AdventCalendar/obj/*
+AdventCalendar/bin/*
+AdventOfCode2024/obj/**
+AdventOfCode2024/bin/**
+
