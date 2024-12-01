@@ -37,8 +37,8 @@ public class Day1 : IDay
             rightColumn.Add(int.Parse(split[1]));
         }
 
-        int simScore = 0;
-        leftColumn.ForEach(x => simScore += x * rightColumn.Count(y => y == x));
+        var rightColumnCount = rightColumn.GroupBy(x => x).ToDictionary(g => g.Key, g => g.Count());
+        int simScore = leftColumn.Sum(x => x * (rightColumnCount.ContainsKey(x) ? rightColumnCount[x] : 0));
 
         return Task.FromResult(new CalendarAnswer(true, simScore.ToString()));
     }
