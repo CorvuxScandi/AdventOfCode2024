@@ -1,0 +1,11 @@
+c:\Users\haade\Developer\AdventOfCode\AdventOfCode2024\AdventCalendar\bin\Debug\net9.0\AdventCalendar.deps.json
+c:\Users\haade\Developer\AdventOfCode\AdventOfCode2024\AdventCalendar\bin\Debug\net9.0\AdventCalendar.dll
+c:\Users\haade\Developer\AdventOfCode\AdventOfCode2024\AdventCalendar\bin\Debug\net9.0\AdventCalendar.pdb
+c:\Users\haade\Developer\AdventOfCode\AdventOfCode2024\AdventCalendar\obj\Debug\net9.0\AdventCalendar.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\haade\Developer\AdventOfCode\AdventOfCode2024\AdventCalendar\obj\Debug\net9.0\AdventCalendar.AssemblyInfoInputs.cache
+c:\Users\haade\Developer\AdventOfCode\AdventOfCode2024\AdventCalendar\obj\Debug\net9.0\AdventCalendar.AssemblyInfo.cs
+c:\Users\haade\Developer\AdventOfCode\AdventOfCode2024\AdventCalendar\obj\Debug\net9.0\AdventCalendar.csproj.CoreCompileInputs.cache
+c:\Users\haade\Developer\AdventOfCode\AdventOfCode2024\AdventCalendar\obj\Debug\net9.0\AdventCalendar.dll
+c:\Users\haade\Developer\AdventOfCode\AdventOfCode2024\AdventCalendar\obj\Debug\net9.0\refint\AdventCalendar.dll
+c:\Users\haade\Developer\AdventOfCode\AdventOfCode2024\AdventCalendar\obj\Debug\net9.0\AdventCalendar.pdb
+c:\Users\haade\Developer\AdventOfCode\AdventOfCode2024\AdventCalendar\obj\Debug\net9.0\ref\AdventCalendar.dll
