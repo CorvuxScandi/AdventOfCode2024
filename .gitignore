@@ -1,13 +1,14 @@
-**/[Bb]in/
-**/[Oo]bj/
-.vscode/**
+.vs/
+.vscode/*
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
 # Build results
 
 [Dd]ebug/
 [Rr]elease/
 x64/
-[Bb]in/
-[Oo]bj/
 AdventCalendar/obj/*
 AdventCalendar/bin/*
 AdventOfCode2024/obj/**
