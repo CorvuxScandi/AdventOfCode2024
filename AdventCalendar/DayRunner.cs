@@ -22,6 +22,12 @@ public class DayRunner
                     return await new Day2().RunAdvanced();
                 }
                return await new Day2().Run();
+               case 4: 
+                if (advanced)
+                {
+                    return await new Day4().RunAdvanced();
+                }
+                return await new Day4().Run();
             default:
                 return new CalendarAnswer(false, "Day not found");
         }
