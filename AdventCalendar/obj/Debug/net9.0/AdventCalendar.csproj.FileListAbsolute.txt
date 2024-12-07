@@ -9,3 +9,4 @@ c:\Users\haade\Developer\AdventOfCode\AdventOfCode2024\AdventCalendar\obj\Debug\
 c:\Users\haade\Developer\AdventOfCode\AdventOfCode2024\AdventCalendar\obj\Debug\net9.0\refint\AdventCalendar.dll
 c:\Users\haade\Developer\AdventOfCode\AdventOfCode2024\AdventCalendar\obj\Debug\net9.0\AdventCalendar.pdb
 c:\Users\haade\Developer\AdventOfCode\AdventOfCode2024\AdventCalendar\obj\Debug\net9.0\ref\AdventCalendar.dll
+C:\Users\haade\Developer\AdventOfCode\AdventOfCode2024\AdventCalendar\obj\Debug\net9.0\AdventCalendar.sourcelink.json

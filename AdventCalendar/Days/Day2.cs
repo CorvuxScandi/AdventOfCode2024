@@ -6,22 +6,24 @@ public class Day2 : IDay
 {
     public Task<CalendarAnswer> Run()
     {
-        List<string> lines = [.. input.Split("\r\n")];
+        List<string> lines = [.. input2.Split("\r\n")];
         int numofValid = lines.Select(line =>
         {
             bool isValid = true;
             string[] parts = line.Split(" ");
             int[] numbers = parts.Select(int.Parse).ToArray();
-            bool isIncreasing = numbers[0] < numbers[1];
+            bool isIncreasing = false;
 
             for (int i = 0; i < numbers.Length - 1; i++)
             {
-                int diff = Math.Abs(numbers[i] - numbers[i + 1]);
-                if(diff < 1 || diff > 3 || (numbers[i] < numbers[i + 1]) != isIncreasing)
+                int diff = numbers[i] - numbers[i + 1];
+                if(Math.Abs(diff) < 1 || Math.Abs(diff) > 3 || i != 0 && diff < 0 != isIncreasing)
                 {
                     isValid = false;
                     break;
                 }
+                isIncreasing = diff < 0;
+
             }
             return isValid;
         }).Count(x => x);
@@ -36,43 +38,20 @@ public class Day2 : IDay
         {
             bool isValid = true;
             string[] parts = line.Split(" ");
-            List<int> numbers = parts.Select(int.Parse).ToList();
+            int[] levels = parts.Select(int.Parse).ToArray();
 
 
-            bool firstOffence = false;
-            bool isIncreasing = numbers[0] < numbers[1];
+            bool isIncreasing = false;
 
-            for (int i = 0; i < numbers.Count - 1; i++)
+            for (int i = 0; i < levels.Length - 1; i++)
             {
-                int pos1 = numbers[i];
-                int pos2 = numbers[i + 1];
-                int diff = pos1 - pos2;
-
-                
-                
-                if(Math.Abs(diff) < 1 )
+                int diff = levels[i] - levels[i + 1];
+                if(Math.Abs(diff) < 1 || Math.Abs(diff) > 3 || i != 0 && diff < 0 != isIncreasing)
                 {
-                    if(firstOffence)
-                    {
-                        isValid = false;
-                        break;
-                    }
-                    firstOffence = true;
-                    numbers.RemoveAt(i);
-                    i = -1;
+                    isValid = Dampener(levels);
+                    break;
                 }
-            
-                if(diff < 1 || diff > 3 || (pos1 < pos2) != isIncreasing)
-                {
-                    if(firstOffence)
-                    {
-                        isValid = false;
-                        break;
-                    }
-                    firstOffence = true;
-                    numbers.RemoveAt(i);
-                    i = -1;
-                }
+                isIncreasing = diff < 0;
             }
             return isValid;
         }).Count(x => x);
@@ -80,13 +59,36 @@ public class Day2 : IDay
         return Task.FromResult(new CalendarAnswer(true, numofValid.ToString()));
     }
 
-    private string input2 = @"7 6 4 2 1
+    private static bool Dampener(int[] levels){
+        int removeAt = 0;
+        List<int> levelsCopy = [.. levels];
+        levelsCopy.RemoveAt(removeAt);
+        bool isIncreasing = false;
+
+        for (int i = 0; i < levelsCopy.Count - 1; i++)
+        {
+            int diff = levelsCopy[i] - levelsCopy[i + 1];
+            if(Math.Abs(diff) < 1 || Math.Abs(diff) > 3 || i != 0 && diff < 0 != isIncreasing)
+            {
+                if(removeAt == levels.Length - 1){
+                    return false;
+                }      
+                levelsCopy = [.. levels];
+                removeAt++;
+                levelsCopy.RemoveAt(removeAt);
+                i = -1;    
+            }
+            isIncreasing = diff < 0;
+        }
+        return true;
+    }
+    private readonly string input2 = @"7 6 4 2 1
 1 2 7 8 9
 9 7 6 2 1
 1 3 2 4 5
 8 6 4 4 1
 1 3 6 7 9";
-    private string input = @"48 51 52 53 52
+    private readonly string input = @"48 51 52 53 52
 86 87 88 91 91
 22 25 28 31 32 36
 65 66 68 69 71 72 75 82

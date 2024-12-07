@@ -16,3 +16,4 @@ c:\Users\haade\Developer\AdventOfCode\AdventOfCode2024\AdventOfCode2024\bin\Debu
 c:\Users\haade\Developer\AdventOfCode\AdventOfCode2024\AdventOfCode2024\bin\Debug\net9.0\AdventCalendar.pdb
 c:\Users\haade\Developer\AdventOfCode\AdventOfCode2024\AdventOfCode2024\obj\Debug\net9.0\AdventOfCode2024.csproj.AssemblyReference.cache
 c:\Users\haade\Developer\AdventOfCode\AdventOfCode2024\AdventOfCode2024\obj\Debug\net9.0\AdventOf.444403F5.Up2Date
+C:\Users\haade\Developer\AdventOfCode\AdventOfCode2024\AdventOfCode2024\obj\Debug\net9.0\AdventOfCode2024.sourcelink.json
